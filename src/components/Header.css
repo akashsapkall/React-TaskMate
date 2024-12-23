@@ -1,0 +1,58 @@
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(203, 196, 196);
+}
+nav{
+    height: 70px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo i{
+    /* margin-top: px; */
+    font-size: 30px;
+    border: 1.5px solid green;
+    border-radius: 5px;
+    padding: 1px 8px;
+    color: green;
+}
+.logo .title{
+    font-size: 25px;
+    font-weight: 600;
+}
+.theme{
+    width:200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.theme .white{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 4px 12px;
+}
+.theme .black{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 4px 12px;
+}
+.span span{
+    margin-left: 6px;
+}
+.theme .partition{
+    font-size: 40px;
+    font-weight: 200;
+}
+.theme .span:hover{
+    scale: 1.03;
+    cursor: pointer;
+}

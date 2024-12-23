@@ -1,0 +1,77 @@
+.tasklist{
+    width: 80vw;
+    margin: 0px auto;
+    border: 2px solid rgb(197, 183, 183);
+    border-radius: 5px;
+    box-shadow: rgb(161, 159, 159) 2px 3px 10px;
+    /* background-color: black;
+    color: white; */
+    /* background-color: aqua; */
+}
+.tasklist .head{
+    width: 90%;
+    margin: 16px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tasklist .head div{
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tasklist .head div .count{
+    background-color: rgba(92, 92, 87, 0.6);
+    padding: 3px 12px;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.tasklist .head button{
+    width: 100px;
+    padding: 2px;
+    /* border: 2px solid rgba(58, 58, 199, 0.844); */
+    border: none;
+    border-radius: 5px;
+    color: rgba(58, 58, 199, 0.844);
+    font-size: 18px;
+    background-color: rgba(58, 58, 199, 0.844);
+    color: white;
+    cursor: pointer;
+
+}
+.tasklist .head button:hover{
+    scale:1.03;
+}
+.tasklist ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tasklist ul li{
+    list-style: none;
+    width: 400px;
+    padding: 16px 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(208, 201, 201);
+    border-left: 8px solid rgba(58, 58, 199, 0.844);
+    border-radius: 8px;
+}
+.tasklist ul li .edit-delete{
+    font-size: 20px;
+    width: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.tasklist ul li .edit-delete .edit{
+    color: blue;
+    cursor: pointer;
+}
+.tasklist ul li .edit-delete .delete{
+    color: red;
+    cursor: pointer;
+}
