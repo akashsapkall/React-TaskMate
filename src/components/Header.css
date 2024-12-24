@@ -29,13 +29,33 @@ nav{
     font-size: 25px;
     font-weight: 600;
 }
-.theme{
-    width:200px;
+.theme-div{
+    width:160px;
+    height: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    /* border: 2px solid black; */
+    /* border-radius: 5px; */
 }
-.theme .white{
+.theme-div div{
+    width: 50%;
+    height: 100%;
+    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.theme-div .light{
+    background-color: white;
+    color: black;
+}
+.theme-div .dark{        
+    background-color: black;
+    color: white;
+}
+/* .theme .white{
     border: 2px solid white;
     border-radius: 5px;
     padding: 4px 12px;
@@ -44,15 +64,15 @@ nav{
     border: 2px solid black;
     border-radius: 5px;
     padding: 4px 12px;
-}
-.span span{
+} */
+/* .span span{
     margin-left: 6px;
-}
-.theme .partition{
+} */
+/* .theme .partition{
     font-size: 40px;
     font-weight: 200;
-}
-.theme .span:hover{
+} */
+.theme-div:hover{
     scale: 1.03;
     cursor: pointer;
 }
