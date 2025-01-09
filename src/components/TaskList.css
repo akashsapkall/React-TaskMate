@@ -4,9 +4,6 @@
     border: 2px solid rgb(197, 183, 183);
     border-radius: 5px;
     box-shadow: rgb(161, 159, 159) 2px 3px 10px;
-    /* background-color: black;
-    color: white; */
-    /* background-color: aqua; */
 }
 .tasklist .head{
     width: 90%;
@@ -74,4 +71,9 @@
 .tasklist ul li .edit-delete .delete{
     color: red;
     cursor: pointer;
+}
+@media only screen and (max-width: 766px) {
+    .tasklist{
+        width: 90vw;
+    }
 }

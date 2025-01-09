@@ -1,5 +1,4 @@
 .add-task{
-    /* background-color: aqua; */
     height: 80px;
     width: 80vw;
     margin: 14px auto;
@@ -9,8 +8,6 @@
     border: 2px solid rgb(197, 183, 183);
     border-radius: 5px;
     box-shadow: rgb(161, 159, 159) 2px 3px 10px;
-    /* background-color: black;
-    color: white;    */
 }
 .add-task form{
     width: 90%;
@@ -36,4 +33,15 @@
 }
 .add-task form button:hover{
     scale: 1.03;
+}
+@media only screen and (max-width: 766px) {
+    .add-task{
+        width: 90vw;
+    }
+    .add-task form input{
+        width:70%;
+    }
+    .add-task form button{
+        width: 80px;
+    }
 }

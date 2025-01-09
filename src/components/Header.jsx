@@ -22,18 +22,21 @@ export const Header = () => {
           <span className="title">TaskMate</span>
         </div>
         <div className="theme-div" onClick={handleTheme}>
-          <div className="light">
-            <span>
-              <i className="bi bi-brightness-low-fill"></i>
-              <span>light</span>
-            </span>
-          </div>
-          <div className="dark">
-            <span>
-              <i className="bi bi-moon-stars-fill"></i>
-              <span>dark</span>
-            </span>
-          </div>
+          {theme ? (
+            <div className="dark">
+              <span>
+                <i className="bi bi-moon-stars-fill"></i>
+                <span>dark</span>
+              </span>
+            </div>
+          ) : (
+            <div className="light">
+              <span>
+                <i className="bi bi-brightness-low-fill"></i>
+                <span>light</span>
+              </span>
+            </div>
+          )}
         </div>
       </nav>
     </header>
