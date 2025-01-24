@@ -4,9 +4,9 @@ export const TaskList = ({ taskList, setTaskList, editTask, setEditTask }) => {
     const newList = taskList.filter((task) => task.id !== id);
     setTaskList(newList);
   };
-  const handleEdit = (id) => {
-    const extractTask = taskList.find((task) => (id===task.id));
-    setEditTask(extractTask);
+  const handleEdit = (task) => {
+    // const extractTask = taskList.find((task) => (id===task.id));
+    setEditTask(task);
   };
   return (
     <section className="tasklist">
@@ -35,7 +35,7 @@ export const TaskList = ({ taskList, setTaskList, editTask, setEditTask }) => {
                 <i
                   className="bi bi-pencil-square edit"
                   onClick={() => {
-                    handleEdit(task.id);
+                    handleEdit(task);
                   }}
                 ></i>
                 <i
