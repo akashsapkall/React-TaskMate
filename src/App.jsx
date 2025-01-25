@@ -1,35 +1,21 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { AddTask } from "./components/AddTask";
 import "./App.css";
 import { TaskList } from "./components/TaskList";
-
+// import { useDispatch,useSelector } from "react-redux";
 function App() {
-  const [taskList, setTaskList] = useState(JSON.parse(localStorage.getItem("tasklist"))||[]);
-  const [editTask, setEditTask] = useState({});
+  // const [taskList, setTaskList] = useState(JSON.parse(localStorage.getItem("tasklist"))||[]);
+  // const [editTask, setEditTask] = useState({});
+  // useEffect(()=>{
+  // localStorage.setItem("tasklist",JSON.stringify(taskList));
+  // },[taskList])
 
-  useEffect(()=>{
-  localStorage.setItem("tasklist",JSON.stringify(taskList));
-  },[taskList])
-
-  // document.documentElement.classList.
   return (
     <>
         <Header />
-        <AddTask
-          taskList={taskList}
-          setTaskList={setTaskList}
-          editTask={editTask}
-          setEditTask={setEditTask}
-        />
-        {/* {console.log(taskList)} */}
-        <TaskList
-          taskList={taskList}
-          setTaskList={setTaskList}
-          editTask={editTask}
-          setEditTask={setEditTask}
-        />
-      {console.log(editTask)}
+        <AddTask />
+        <TaskList />
     </>
   );
 }

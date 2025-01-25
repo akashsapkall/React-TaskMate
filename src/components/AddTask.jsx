@@ -1,16 +1,21 @@
 import "./AddTask.css";
-export const AddTask = ({ taskList, setTaskList, editTask, setEditTask }) => {
+import { useDispatch, useSelector } from "react-redux";
+import { add, getUpdate, update } from "../store/taskSlice";
+export const AddTask = () => {
+  const dispatch = useDispatch();
+  const editTask = useSelector((state) => state.taskState.editTask);
   const handelSubmit = (e) => {
     e.preventDefault();
     if (editTask.id) {
       const date = new Date();
-      const updatedTaskList=taskList.map((task)=>(task.id === editTask.id? {id:editTask.id,
-        // name:e.target.task.value,
-        name:editTask.name,
-        time:`${date.toLocaleTimeString()} ${date.toLocaleDateString()}`}:task))
-      setTaskList(updatedTaskList);
+      const updatedEditTask = {
+        id: editTask.id,
+        name: editTask.name,
+        time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`,
+      };
+      dispatch(getUpdate(updatedEditTask));
+      dispatch(update({}));
       // e.target.task.value="";
-      setEditTask({});
     } else {
       const date = new Date();
       const newTask = {
@@ -18,11 +23,13 @@ export const AddTask = ({ taskList, setTaskList, editTask, setEditTask }) => {
         name: e.target.task.value,
         time: `${date.toLocaleTimeString()} ${date.toLocaleDateString()}`,
       };
-      if (newTask.name) {
-        setTaskList([...taskList, newTask]);
-      }
+      dispatch(add(newTask));
+      dispatch(update({}));
+      // if (newTask.name) {
+      // setTaskList([...taskList, newTask]);
+      // }
       // e.target.task.value="";
-      setEditTask({});
+      // setEditTask({});
     }
   };
   return (
@@ -35,11 +42,12 @@ export const AddTask = ({ taskList, setTaskList, editTask, setEditTask }) => {
           placeholder="Add Task"
           maxLength="30"
           name="task"
-          onChange={(e)=>{
-            setEditTask({...editTask,name:e.target.value});
+          onChange={(e) => {
+            dispatch(update({ ...editTask, name: e.target.value }));
           }}
         />
-        <button type="submit">{editTask.id?"Update":"Add"}</button>
+        <button type="submit">{editTask.id ? "Update" : "Add"}</button>
+        {/* <button type="submit">Add</button> */}
       </form>
     </section>
   );
